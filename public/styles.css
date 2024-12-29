@@ -2,14 +2,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9; /* Light background for modern look */
+    color: #333; /* Standard text color */
+}
+
+header {
+    background: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     list-style: none;
-    background: #fff;
+    margin: 0;
 }
 
 header nav ul li {
@@ -20,40 +28,69 @@ header nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FF5733;
 }
 
 header nav ul li .btn {
     padding: 10px 20px;
-    background: #000;
+    background: #FF5733;
     color: #fff;
     border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header nav ul li .btn:hover {
+    background: #FF4500;
 }
 
 .hero {
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    flex-direction: column; /* Column direction for better mobile experience */
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; /* Increased padding */
+    gap: 30px;
 }
 
 .hero .intro {
-    max-width: 50%;
+    max-width: 600px; /* Limiting width for better readability */
 }
 
 .hero .intro h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    line-height: 1.2;
 }
 
 .hero .intro span {
     color: #FF5733;
 }
 
-.hero .intro .hire-me {
+.hero .intro h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #555;
+}
+
+.hero .intro .hire-me,
+.hero .intro .projects-link {
     padding: 10px 20px;
     background: #FF5733;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.hero .intro .hire-me:hover,
+.hero .intro .projects-link:hover {
+    background: #FF4500;
 }
 
 .hero .intro .stats {
@@ -62,14 +99,13 @@ header nav ul li .btn {
 }
 
 .profile-pic {
-    position: relative;
     text-align: center;
 }
 
 .profile-pic img {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 150px; /* Reduced size for balance */
+    height: 150px; /* Reduced size for balance */
     object-fit: cover;
 }
 
@@ -80,14 +116,30 @@ header nav ul li .btn {
     margin-top: 10px;
 }
 
-.project-stats ul {
+.profile-pic .tools img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.profile-pic .tools img:hover {
+    transform: scale(1.1);
+}
+
+.project-stats {
     padding: 20px;
-    background: #F4F4F4;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+    text-align: center; /* Centered text */
 }
 
 footer {
     text-align: center;
     padding: 20px;
+    background: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 footer form {
@@ -109,4 +161,9 @@ footer form button {
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+footer form button:hover {
+    background: #444;
 }
